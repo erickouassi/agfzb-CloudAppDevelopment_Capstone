@@ -1,11 +1,11 @@
   applications:
-  - name: djangoapp
+  - name: car2kapp
     routes:
-      - route: $HOST.$DOMAIN
+      - route: car2kapp.mybluemix.net
     memory: 128M
     buildpack: python_buildpack
-  - name: djangoapp-nginx
+  - name:  car2kapp-nginx
     routes:
-      - route: $HOST.$DOMAIN/static
+      - route: car2kapp.mybluemix.net/static
     memory: 128M
     buildpack: staticfile_buildpack
