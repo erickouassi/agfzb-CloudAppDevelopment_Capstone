@@ -37,7 +37,7 @@
                                 <input type="text" class="form-control" placeholder="Username" name="username" >
                                 <input type="password" class="form-control" placeholder="Password" name="psw" >
                                 <button class="btn btn-primary" type="submit">Login</button>
-                                <a class="btn btn-link" href="{% url 'djangoapp:registration' %}">Sign Up</a>
+                                <a class="btn btn-link" href="#">Sign Up</a>
                             </div>
                         </form>
                     </li>
@@ -47,8 +47,27 @@
         </nav>
 
         <h1>
-            Welcome to Best Cars dealership, home to the best cars in North America. We sell domestic and imported cars at reasonable prices.
+            Login
         </h1>
+        <!-- Loging form-->
+        <form action="{% url 'djangoapp:login' %}" method="post">
+            {% csrf_token %}
+            <div class="container">
+                <h1>Login</h1>
+                <div class="form-group">
+                  <label for="username"><b>User Name</b></label>
+                  <input id="username" class = "form-control" type="text" placeholder="Enter User Name: " name="username" required>
+                  <label for="psw"><b>Password</b></label>
+                  <input id="psw" class = "form-control" type="password"  placeholder="Enter Password: " name="psw" required>
+                </div>
+                {% if message %}
+                  <div class="alert alert-warning">
+                    {{ message }}
+                  </div>
+                {% endif %}
+                <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+        </form>
 
     </body>
 
