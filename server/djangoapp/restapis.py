@@ -55,7 +55,7 @@ def get_dealers_from_cf(url, **kwargs):
 
     # Call get_request with a URL parameter
     ### Removed line 57 after forum help
-    #json_result = get_request(url)
+    json_result = get_request(url)
     #state = kwargs.get("state")
     #if state:
     #    json_result = get_request(url, state=state)
@@ -158,7 +158,7 @@ def get_dealer_reviews_from_cf(url, dealerId):
 def analyze_review_sentiments(text):
 # - Call get_request() with specified arguments
 # - Get the returned sentiment label such as Positive or Negative
-    url = 'https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/81aebb5f-80d5-4f97-aaf4-6510e41dd669v1/analyze'
+    url = 'https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/81aebb5f-80d5-4f97-aaf4-6510e41dd669/v1/analyze'
     api_key = '964cQh5t4tYpGrvnuaM4ETtzlKHGqZ8DkejH6guTPPfm'
 
     response = get_request(url, 
