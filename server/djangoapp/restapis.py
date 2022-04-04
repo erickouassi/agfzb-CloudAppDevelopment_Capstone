@@ -54,12 +54,13 @@ def get_dealers_from_cf(url, **kwargs):
     results = []
 
     # Call get_request with a URL parameter
+    ### Removed line 57 after forum help
     #json_result = get_request(url)
-    state = kwargs.get("state")
-    if state:
-        json_result = get_request(url, state=state)
-    else:
-        json_result = get_request(url)
+    #state = kwargs.get("state")
+    #if state:
+    #    json_result = get_request(url, state=state)
+   # else:
+    #    json_result = get_request(url)
 
 
     if json_result:
