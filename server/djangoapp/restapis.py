@@ -3,9 +3,9 @@ import json
 from .models import CarDealer, DealerReview
 from requests.auth import HTTPBasicAuth
 
-from ibm_watson import NaturalLanguageUnderstandingV1
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-from ibm_watson.natural_language_understanding_v1 import Features, SentimentOptions
+#from ibm_watson import NaturalLanguageUnderstandingV1
+#from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+#from ibm_watson.natural_language_understanding_v1 import Features, SentimentOptions
 
 # Create a `get_request` to make HTTP GET requests
 # e.g., response = requests.get(url, params=params, headers={'Content-Type': 'application/json'},
@@ -117,7 +117,7 @@ def get_dealer_reviews_from_cf(url, dealerId):
     return results
 
 def analyze_review_sentiments(text):
-    url = 'hhttps://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/81aebb5f-80d5-4f97-aaf4-6510e41dd669/v1/analyze?version=2021-08-01'
+    url = 'https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/81aebb5f-80d5-4f97-aaf4-6510e41dd669/v1/analyze?version=2021-08-01'
     api_key = '964cQh5t4tYpGrvnuaM4ETtzlKHGqZ8DkejH6guTPPfm'
     params = {
         "text": text,
